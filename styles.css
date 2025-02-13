@@ -1,0 +1,486 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2c2c31;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9e9ea0;
+}
+
+body {
+  background-color: #121215;
+  color: #eaeaea;
+
+  font-family: "Roboto", sans-serif;
+
+  display: grid;
+  grid-template-areas: "profile timeline";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh;
+}
+
+nav {
+  padding: 64px;
+  grid-area: timeline;
+
+  overflow-y: scroll;
+  animation: entering 0.7s ease-in-out;
+}
+
+.memory {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-decoration: none;
+  margin-bottom: 64px;
+}
+
+.memory small {
+  color: #bebebf;
+  font-size: 0.75rem;
+}
+
+.memory h1 {
+  font-size: 2rem;
+  color: #bebebf;
+}
+
+.memory img {
+  padding: 10px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.memory div {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#img1:hover {
+  transform: scale(1.1);
+}
+
+#img2:hover {
+  transform: scale(1.1);
+}
+
+#img3:hover {
+  transform: scale(1.1);
+}
+
+.memory p {
+  padding-right: 170px;
+  font-size: 1.2rem;
+  color: #bfbfbe;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.inprogress {
+  width: 600px;
+  align-items: center;
+  margin: 0px;
+}
+
+aside {
+  grid-area: profile;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-right: 1px solid;
+  border-image: linear-gradient(#727275, #2c2c31) 1;
+
+  background-image: url("./assets/background.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+aside * {
+  animation: entering 0.7s ease-in-out;
+}
+
+aside img:nth-child(2) {
+  width: 300px;
+  height: 380px;
+  border-radius: 50%;
+
+  border: 2px solid transparent;
+  background: linear-gradient(#be476f, #ed5636, #633bbc) padding-box,
+    linear-gradient(260deg, #be476f, #ed5636, #633bbc) border-box;
+}
+
+#love1 {
+  width: 100px;
+}
+aside p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+aside span {
+  font-size: 0.75rem;
+  color: #9e9ea0;
+}
+
+.genesis {
+
+text-align: center;
+margin-right: 200px;
+  font-family: "Special Elite", cursive;
+  font-size: 16px;
+    animation-name: texto-genesis;
+  animation-duration: 35s;
+  animation-timing-function: ease-in-out;
+}
+
+
+@keyframes texto-genesis {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.maquina-escrever {
+  font-family: "Special Elite", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: left;
+  font-size: 18px;
+  /* border-right: 2px solid rgba(255, 255, 255, 0.75);                Para fazer a barra de escrita */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes blinkcursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 33em;
+  }
+}
+
+.typing-animation {
+  animation: blinkcursor 500ms steps(60) infinite normal,
+    typing 4s steps(40) 1s normal both;
+
+  animation-delay: 6.2s;
+}
+
+.typing-animation2 {
+  animation: blinkcursor 500ms steps(60) infinite normal,
+    typing 4s steps(40) 1s normal both;
+
+  animation-delay: 10.2s;
+}
+
+.typing-animation3 {
+  animation: blinkcursor 500ms steps(60) infinite normal,
+    typing 4s steps(40) 1s normal both;
+
+  animation-delay: 14.2s;
+}
+
+.typing-animation4 {
+  animation: blinkcursor 500ms steps(60) infinite normal,
+    typing 4s steps(40) 1s normal both;
+
+  animation-delay: 18.2s;
+}
+
+.typing-animation5 {
+  animation: blinkcursor 500ms steps(60) infinite normal,
+    typing 4s steps(40) 1s normal both;
+
+  animation-delay: 22.2s;
+}
+
+.typing-animation6 {
+  animation: blinkcursor 500ms steps(60) infinite normal,
+    typing 4s steps(40) 1s normal both;
+
+  animation-delay: 26.2s;
+}
+
+/* A partir de agora tudo é animação!!!!!!!!!!! */
+
+.animaaside {
+  animation-name: animaaside-animation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animaaside-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima01 {
+  animation-name: anima01-animation;
+  animation-duration: 35s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima01-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .anima02 {
+  animation-name: anima02-animation;
+  animation-duration: 50s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima02-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima03 {
+  animation-name: anima03-animation;
+  animation-duration: 65s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima03-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima04 {
+  animation-name: anima04-animation;
+  animation-duration: 80s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima04-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima05 {
+  animation-name: anima05-animation;
+  animation-duration: 95s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima05-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima06 {
+  animation-name: anima06-animation;
+  animation-duration: 110s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima06-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima07 {
+  animation-name: anima07-animation;
+  animation-duration: 125s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima07-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima08 {
+  animation-name: anima08-animation;
+  animation-duration: 140s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima08-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima09 {
+  animation-name: anima09-animation;
+  animation-duration: 155s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima09-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima10 {
+  animation-name: anima10-animation;
+  animation-duration: 170s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima10-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anima11 {
+  animation-name: anima11-animation;
+  animation-duration: 185s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes anima11-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas:
+      "profile"
+      "timeline";
+  }
+
+  aside {
+    border-right: none;
+    padding: 32px 12px;
+  }
+
+  nav {
+    overflow-y: visible;
+    padding: 22px;
+  }
+}
